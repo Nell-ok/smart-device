@@ -1,0 +1,67 @@
+.feadback {
+  background-color: $basic-blue;
+}
+
+.feadback__mask {
+  background: url("../img/triangle.png") no-repeat;
+  background-size: calc(521px + (977 - 521) * ((100vw - 1024px) / (1920 - 1024))) 100%;
+
+  @media (min-width: $desktop-only) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/triangle@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
+  }
+}
+
+.feadback__wrapper {
+  padding: calc(88px + (165 - 88) * ((100vw - 1024px) / (1920 - 1024))) 0 calc(133px + (249 - 133) * ((100vw - 1024px) / (1920 - 1024)));
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  gap: calc(61px + (115 - 61) * ((100vw - 1024px) / (1920 - 1024)));
+  align-items: center;
+  justify-items: end;
+
+  @media (max-width: $tablet-width) {
+    padding: 45px 0 124px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 46px 0 88px;
+  }
+}
+
+.feadback__wrapper-photo {
+  position: relative;
+  width: calc(438px + (510 - 438) * ((100vw - 1024px) / (1920 - 1024)));
+  height: 285px;
+  padding-top: 21px;
+  object-fit: cover;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.feadback__form {
+  padding-right: calc(5.3px + (10 - 5.3) * ((100vw - 1024px) / (1920 - 1024)));
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 13px;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 0;
+    gap: 7px;
+  }
+
+  @media (max-width: $mobile-width) {
+    gap: 9px;
+  }
+}

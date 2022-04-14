@@ -1,0 +1,12 @@
+.page-wrapper {
+  max-width: calc(1004px + (1220 - 1004) * ((100vw - 1024px) / (1920 - 1024)));
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    max-width: 670px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: calc(100% - 50px);
+  }
+}

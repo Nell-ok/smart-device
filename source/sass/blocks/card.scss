@@ -1,0 +1,174 @@
+.card {
+  position: relative;
+
+  &:hover {
+    filter: brightness(50%);
+  }
+}
+
+.card__photo {
+  width: calc(305px + (350 - 305) * ((100vw - 1024px) / (1920 - 1024)));
+  height: calc(600px + (650 - 600) * ((100vw - 1024px) / (1920 - 1024)));
+  object-fit: cover;
+
+  @media (max-width: $tablet-width) {
+    width: 670px;
+    height: 250px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: calc(270px + (717 - 270) * ((100vw - 320px) / (767 - 320)));
+  }
+}
+
+.card__photo--one {
+  background: $background-card url("../img/catalog-photo-one.png") no-repeat;
+
+  @media (min-width: $desktop-only) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-one@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background: url("../img/catalog-photo-one-tablet.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-one-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background: url("../img/catalog-photo-one-mobile.png") no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-one-mobile@2x.png");
+    }
+  }
+}
+
+.card__photo--two {
+  background: $background-card url("../img/catalog-photo-two.png") no-repeat;
+
+  @media (min-width: $desktop-only) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-two@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background: url("../img/catalog-photo-two-tablet.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-two-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background: url("../img/catalog-photo-two-mobile.png") no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-two-mobile@2x.png");
+    }
+  }
+}
+
+.card__photo--three {
+  background: $background-card url("../img/catalog-photo-three.png") no-repeat;
+
+  @media (min-width: $desktop-only) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-three@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background: url("../img/catalog-photo-three-tablet.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-three-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background: url("../img/catalog-photo-three-mobile.png") no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-photo-three-mobile@2x.png");
+    }
+  }
+}
+
+.card__link--two br {
+  @media (min-width: $desktop-only) {
+    display: none;
+  }
+}
+
+.card__link p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  color: $basic-white;
+  position: absolute;
+  top: 48px;
+  left: 41px;
+
+  @media (max-width: $tablet-width) {
+    top: 38px;
+    left: 46px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    top: 28px;
+    left: 31px;
+  }
+}
+
+.card__link--two p {
+  @media (min-width: $desktop-only) {
+    max-width: 190px;
+  }
+}
+
+.card__more {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  right: 1px;
+  background-color: $basic-blue;
+  border-radius: 3px 0 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5.4px;
+    height: 2px;
+    top: 45%;
+    left: 48%;
+    background-color: $basic-white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5.4px;
+    height: 2px;
+    top: 50%;
+    left: 48%;
+    background-color: $basic-white;
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 40px;
+    height: 40px;
+  }
+}

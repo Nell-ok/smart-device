@@ -1,0 +1,267 @@
+.page-footer {
+  grid-row: 3 / -1;
+  grid-column: 1 / -1;
+  background-color: $basic-dark;
+}
+
+.page-footer__wrapper {
+  padding: 50px 0 55px;
+  display: flex;
+  gap: calc(53px + (100 - 53) * ((100vw - 1024px) / (1920 - 1024)));
+
+  @media (max-width: $tablet-width) {
+    max-width: calc(100% - 91px);
+    padding-bottom: 63px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 35px;
+    column-gap: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+}
+
+.page-footer__widget {
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: $tablet-width) {
+    grid-column: 1 / -1;
+    padding-right: 0;
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.page-footer__logo {
+  @media (max-width: $tablet-width) {
+    padding-left: 4px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-right: 6px;
+  }
+}
+
+.page-footer__social {
+  padding-left: 10px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 5px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 15px;
+  }
+}
+
+.page-footer__accordion {
+  padding-top: 7px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 22px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    gap: 0;
+  }
+}
+
+.page-footer__accordion--nav {
+  @media (max-width: $tablet-width) {
+    padding-left: 4px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 22px 25px 0;
+    border-top: 1px solid $border-accordion;
+    border-bottom: 1px solid $border-accordion;
+  }
+}
+
+.page-footer__accordion--contacts {
+  padding-left: calc(13px + (26 - 13) * ((100vw - 1024px) / (1920 - 1024)));
+
+  @media (max-width: $tablet-width) {
+    padding-left: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 22px 25px 0;
+    border-bottom: 1px solid $border-accordion;
+  }
+}
+
+.page-footer__accordion h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $basic-white;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.page-footer__accordion--contacts h2 {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.page-footer__accordion-button {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    position: absolute;
+    width: calc(320px + (767 - 320) * ((100vw - 320px) / (767 - 320)));
+    height: 60px;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+  }
+}
+
+.page-footer__accordion--contacts .page-footer__accordion-button {
+  @media (max-width: $mobile-width) {
+    height: 54px;
+  }
+}
+
+.page-footer__accordion--opened .page-footer__accordion-button {
+  @media (max-width: $mobile-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 27px;
+      right: 27px;
+      width: 15px;
+      height: 1px;
+      background-color: $button-white;
+    }
+  }
+}
+
+.page-footer__accordion--closed .page-footer__accordion-button {
+  @media (max-width: $mobile-width) {
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      right: 26px;
+      width: 15px;
+      height: 1px;
+      background-color: $button-white;
+    }
+
+    &::after {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.page-footer__accordion-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.page-footer__accordion-list--contacts {
+  @media (max-width: $mobile-width) {
+    padding-bottom: 16px;
+  }
+}
+
+.page-footer__accordion--closed .page-footer__accordion-list--contacts {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.page-footer__wrapper-list {
+  display: flex;
+  gap: calc(25px + (48 - 25) * ((100vw - 1024px) / (1920 - 1024)));
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 16px;
+  }
+}
+
+.page-footer__accordion--closed .page-footer__wrapper-list {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.page-footer__accordion-item--adress {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.page-footer__accordion-link {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-size: calc(14px + (16 - 14) * ((100vw - 1024px) / (1920 - 1024)));
+  line-height: 22px;
+  color: rgba($basic-white, 0.7);
+  cursor: pointer;
+
+  &:hover {
+    color: $basic-blue;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.page-footer__accordion--nojs .page-footer__accordion-button {
+  display: none;
+}

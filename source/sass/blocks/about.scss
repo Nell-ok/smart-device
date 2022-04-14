@@ -1,0 +1,125 @@
+.about {
+  padding: 0 0 100px;
+  background-color: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: calc(53px + (100 - 53) * ((100vw - 1024px) / (1920 - 1024)));
+
+  @media (max-width: $tablet-width) {
+    gap: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
+
+.about__wrapper-photo {
+  grid-column: 1 / 2;
+  width: 150px;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.about__wrapper-photo img {
+  width: 150px;
+  height: 320px;
+  display: block;
+  text-indent: -100vw;
+  object-fit: cover;
+
+  @media (max-width: $tablet-width) {
+    width: 142px;
+    padding-top: 5px;
+  }
+}
+
+.about__wrapper-description {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.about__wrapper-description h2 {
+  margin: 0;
+  padding-bottom: 13px;
+  font-size: calc(34px + (36 - 34) * ((100vw - 1024px) / (1920 - 1024)));
+  font-weight: 400;
+  line-height: 51px;
+  color: $basic-dark;
+
+  @media (max-width: $tablet-width) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.about__text p {
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: "PT Mono", "Courier New", monospace;
+  color: $basic-dark;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 17px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 16px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__text span {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.about__text--all-closed {
+  display: none;
+}
+
+.about__link {
+  max-width: 154px;
+  margin-top: 19px;
+  padding: 14px 12px 13px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-blue;
+  border: 1px solid $basic-blue;
+  border-radius: 3px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 134px;
+    padding: 8px 12px 8px;
+  }
+}

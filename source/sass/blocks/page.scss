@@ -1,0 +1,23 @@
+.page {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $basic-light;
+  background-color: $basic-white;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.page__body--hidden {
+  overflow-y: hidden;
+}

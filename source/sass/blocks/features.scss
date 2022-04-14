@@ -1,0 +1,149 @@
+.features {
+  padding: 122px 0 121px;
+  background-color: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    padding: 81px 0 76px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 50px 0 48px;
+  }
+}
+
+.features__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 31px;
+  column-gap: 33px;
+
+  @media (max-width: $tablet-width) {
+    row-gap: 32px;
+    column-gap: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr) repeat(2, min-content);
+    gap: 31px;
+  }
+}
+
+.features__item {
+  min-height: 190px;
+  padding: 40px 45px 68px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 14px;
+  position: relative;
+  outline: 1px solid $basic-border;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100.7%;
+    top: -1px;
+    left: 0;
+    background-color: $basic-blue;
+
+    @media (max-width: $tablet-width) {
+      height: 100.5%;
+    }
+  }
+
+  &:hover {
+    background-color: $basic-blue;
+    outline: 1px solid $basic-blue;
+  }
+
+  &:hover h3 {
+    color: $basic-light;
+  }
+
+  &:hover p {
+    color: $basic-light;
+  }
+
+  &:hover svg {
+    fill: $basic-light;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 290px;
+    padding-bottom: 28px;
+    padding-right: 44px;
+    gap: 9px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 239px;
+    padding: 30px 32px 55px 30px;
+    gap: 10px;
+  }
+}
+
+.features__item svg {
+  fill: $basic-blue;
+}
+
+.features__wrapper-icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.features__item--short .features__wrapper-icon {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 9px;
+  }
+}
+
+.features__item h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+  color: $basic-blue;
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.features__item--short h3 {
+  @media (max-width: $mobile-width) {
+    padding-bottom: 3px;
+  }
+}
+
+.features__item p {
+  margin: 0;
+  font-family: "PT Mono", "Courier New", monospace;
+  color: $basic-dark;
+
+  @media (max-width: $tablet-width) {
+    line-height: 135%;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
