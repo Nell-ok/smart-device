@@ -71,21 +71,27 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: calc(11px + (20 - 11) * ((100vw - 1024px) / (1920 - 1024)));
+  gap: 20px;
   justify-content: space-between;
 
-  @media (max-width: $tablet-width) {
+  /*@media (max-width: $tablet-width) {
     gap: 20px;
-  }
+  }*/
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
   }
 }
 
 .form__list--modal {
   flex-direction: column;
+}
+
+.form__item:not(:last-child) {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__item input,
@@ -117,7 +123,7 @@
   padding: 14px 15px;
 
   @media (max-width: $tablet-width) {
-    min-width: 290px;
+    min-width: calc(290px + (416 - 290) * ((100vw - 768px) / (1023 - 768)));
   }
 
   @media (max-width: $mobile-width) {
@@ -131,7 +137,7 @@
   resize: none;
 
   @media (max-width: $tablet-width) {
-    min-width: 640px;
+    min-width: calc(640px + (893 - 640) * ((100vw - 768px) / (1023 - 768)));
     padding: 32px 15px 14px;
   }
 
@@ -184,7 +190,7 @@
   border-radius: 3px;
 
   @media (max-width: $tablet-width) {
-    min-width: 265px;
+    min-width: calc(265px + (355 - 265) * ((100vw - 768px) / (1023 - 768)));
     padding: 15px 25px 11px;
   }
 
@@ -204,6 +210,7 @@
 
   @media (max-width: $tablet-width) {
     padding-left: 25px;
+    max-width: 297px;
   }
 
   @media (max-width: $mobile-width) {

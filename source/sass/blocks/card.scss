@@ -12,7 +12,7 @@
   object-fit: cover;
 
   @media (max-width: $tablet-width) {
-    width: 670px;
+    width: calc(668px + (923 - 668) * ((100vw - 768px) / (1023 - 768)));
     height: 250px;
   }
 
@@ -23,6 +23,7 @@
 
 .card__photo--one {
   background: $background-card url("../img/catalog-photo-one.png") no-repeat;
+  background-size: 100% 100%;
 
   @media (min-width: $desktop-only) {
     @media (min-resolution: 2dppx) {
@@ -32,6 +33,7 @@
 
   @media (max-width: $tablet-width) {
     background: url("../img/catalog-photo-one-tablet.png") no-repeat;
+    background-size: 100%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/catalog-photo-one-tablet@2x.png");
@@ -50,6 +52,7 @@
 
 .card__photo--two {
   background: $background-card url("../img/catalog-photo-two.png") no-repeat;
+  background-size: 100% 100%;
 
   @media (min-width: $desktop-only) {
     @media (min-resolution: 2dppx) {
@@ -59,6 +62,7 @@
 
   @media (max-width: $tablet-width) {
     background: url("../img/catalog-photo-two-tablet.png") no-repeat;
+    background-size: 100%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/catalog-photo-two-tablet@2x.png");
@@ -77,6 +81,7 @@
 
 .card__photo--three {
   background: $background-card url("../img/catalog-photo-three.png") no-repeat;
+  background-size: 100% 100%;
 
   @media (min-width: $desktop-only) {
     @media (min-resolution: 2dppx) {
@@ -86,6 +91,7 @@
 
   @media (max-width: $tablet-width) {
     background: url("../img/catalog-photo-three-tablet.png") no-repeat;
+    background-size: 100%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/catalog-photo-three-tablet@2x.png");

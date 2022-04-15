@@ -1,5 +1,9 @@
+const MIN_LENGTH = 18;
+
 const pageBody = document.querySelector('.page__body');
 const buttonHeader = document.querySelector('.page-header__button');
+const pageForm = document.querySelectorAll('[name="form"]');
+const telInput = document.querySelectorAll('[type="tel"]');
 const modalForm = document.querySelector('.modal');
 const modalInput = document.querySelector('.modal [type="text"]');
 const modalOverlay = document.querySelector('.modal__overlay');
@@ -9,7 +13,7 @@ const textAll = document.querySelector('.about__text--all');
 const buttonAll = document.querySelector('.about__link');
 const maskedInputs = document.querySelectorAll('[data-mask]');
 
-const isElements = accordionsFooter && textAll && buttonAll && buttonHeader && modalForm;
+const isElements = accordionsFooter && textAll && buttonAll && buttonHeader && modalForm && pageForm;
 
 const activateScript = () => {
   accordionsFooter.forEach((item) => {
@@ -144,6 +148,23 @@ const createMask = () => {
     });
   }
 };
+
+pageForm.forEach((form) => {
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    telInput.forEach((input) => {
+      const valueLength = input.value.length;
+      if (valueLength < MIN_LENGTH) {
+        return;
+      }
+      if (valueLength > MIN_LENGTH) {
+        return;
+      }
+      form.submit();
+      input.value = '';
+    });
+  });
+});
 
 if (isElements) {
   activateScript();

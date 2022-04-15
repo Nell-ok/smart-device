@@ -86,4 +86,14 @@
     gap: 30px;
     align-items: center;
   }
+
+  @media (max-width: $mobile-width) {
+    gap: 0;
+  }
+}
+
+.catalog__item:not(:last-child) {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
 }

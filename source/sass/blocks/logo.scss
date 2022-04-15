@@ -2,10 +2,6 @@
   display: block;
 }
 
-.logo:hover svg {
-  filter: brightness(50%);
-}
-
 .logo__wrapper--all {
   @media (max-width: $mobile-width) {
     display: none;
