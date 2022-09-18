@@ -4,6 +4,12 @@
 
 ---
 
+# ![Image of project «Smart Device»](https://ic.wampi.ru/2022/09/18/SmartDevice.md.png)
+
+* [Подробнее](https://smart-device.netlify.app/)
+
+---
+
 ## Краткая инструкция по работе
 Для начала работы у вас должент быть установлен **Node.js**
 
